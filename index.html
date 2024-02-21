@@ -2,8 +2,8 @@
 <html>
   <head>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://cdn.rawgit.com/jeromeetienne/AsR.js/1.6.2/aframe/build/aframe-ar.js"></script>
-    <title>Grimme-Aelling Medal WebAR</title>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+    <title>WebAR-OtoMedal</title>
   </head>
   <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded arjs="debugUIEnabled:false;" renderer="gammaOutput: true;" vr-mode-ui="enabled: false">
@@ -11,17 +11,17 @@
             <!-- 3Dモデルをプリロード -->
             <a-asset-item id="medal" src="models/ARmedal.glb"></a-asset-item>
           </a-assets>
-    <!-- マーカーを定義 -->
-    <a-marker type="pattern" url="images/armarker.patt">
-        <a-entity 
-            gltf-model="#medal" 
-            scale="0.5 0.5 0.5" 
-            animation="property: rotation; to: 0 360 0; loop: true; dur: 4000; easing: linear;">
-        </a-entity>
-    </a-marker>
+        <!-- マーカーを定義 -->
+        <a-marker type="pattern" url="images/armarker.patt">
+            <a-entity 
+                gltf-model="#medal" 
+                scale="1 1 1"
+                animation="property: rotation; to: 0 360 0; loop: true; dur: 4000; easing: linear;">
+            </a-entity>
+        </a-marker>
 
-    <!-- カメラ設定 -->
-      <a-entity camera></a-entity>
+        <!-- カメラ設定 -->
+        <a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
